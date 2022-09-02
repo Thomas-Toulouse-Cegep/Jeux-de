@@ -10,5 +10,11 @@ namespace Jeuxdée
         private void pictureBox1_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnBrasser_Click(object sender, EventArgs e)
+        {
+            De de = new De(7);
+            de.Generer();
+        }
     }
 }
