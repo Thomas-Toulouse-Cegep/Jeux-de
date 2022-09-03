@@ -1,40 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Jeuxdée
 {
-    internal class De : Controleur
+    internal class De : DeControleur
     {
-        private int nbface;
+        private Random rNb = new Random();
 
-        //private Random rNb = new Random();
         private int deNb;
 
-        private string type;
+        private string type = "normal";
 
-        public De(int nbface)
+        public De(int nbFacePlusUn, string type, int chance) : base(nbFacePlusUn, type, chance)
         {
-            Nbface = nbface;
-            //RNb = rNb;
         }
 
-        // private;
-
-        public int Nbface { get => nbface; set => nbface = value; }
-
-        public int Generer()
+        public override int Generer()
         {
-            deNb = rNb.Next(1, nbface);
+            deNb = rNb.Next(1, NbFace);
             MessageBox.Show(deNb.ToString());
             return deNb;
-        }
-
-        public override void ImageDe(PictureBox pictureBox, Graphics graphics)
-        {
-            throw new NotImplementedException();
         }
     }
 }

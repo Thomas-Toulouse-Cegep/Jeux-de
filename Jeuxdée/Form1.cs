@@ -1,3 +1,5 @@
+using System;
+
 namespace Jeuxdée
 {
     public partial class Form1 : Form
@@ -13,8 +15,11 @@ namespace Jeuxdée
 
         private void btnBrasser_Click(object sender, EventArgs e)
         {
-            De de = new De(7);
+            De de = new De(7, "poenis", 0);
             de.Generer();
+            //de.Pointage();
+
+            txtPoint.Text = de.Point.ToString();
         }
     }
 }
