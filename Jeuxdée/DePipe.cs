@@ -8,15 +8,41 @@ namespace Jeuxdée
 {
     internal class DePipe : DeControleur
     {
-        public DePipe(int nbFacePlusUn, string type, int chance, int deNb) : base(nbFacePlusUn, type, chance)
+        private Random rNb = new Random();
+
+        private int deNb;
+
+        public DePipe(int nbFacePlusUn, string type, int chance) : base(nbFacePlusUn, type, chance)
         {
+            type = "pipe";
         }
 
         public override int Generer()
         {
-            //MessageBox.Show(DeNb.ToString());
+            Random randomchance = new Random();
+            deNb = rNb.Next(1, NbFace);
+            if (deNb <= 3)
+            {
+                deNb = deNb * 2;
+                //deNb  = rNb.Next(1, NbFace) * 2;
+                MessageBox.Show(deNb.ToString());
+               
+            }
+            else
+            {
+               
+                //deNb = rNb.Next(1, NbFace);
+                MessageBox.Show(deNb.ToString());
+            }
+            Type = "Pipé";
+            Pointage();
+            return deNb;
+        }
 
-            return 1;
+        public override int Pointage()
+        {
+            Point = deNb + Point;
+            return Point;
         }
     }
 }

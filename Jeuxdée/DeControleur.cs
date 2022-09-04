@@ -15,7 +15,7 @@ namespace Jeuxdée
         private int deNb;
         private Random rNb = new Random();
 
-        protected DeControleur(int nbFacePlusUn, string type, int chance)
+        public DeControleur(int nbFacePlusUn, string type, int chance)
         {
             this.nbFacePlusUn = nbFacePlusUn;
             this.type = type;
@@ -28,5 +28,7 @@ namespace Jeuxdée
 
         //public abstract void ImageDe(PictureBox pictureBox, Graphics graphics);
         public abstract int Generer();
+
+        public abstract int Pointage();
     }
 }

@@ -17,13 +17,28 @@ namespace Jeuxdée
 
         public De(int nbFacePlusUn, string type, int chance) : base(nbFacePlusUn, type, chance)
         {
+            type = "normale";
         }
 
         public override int Generer()
         {
-            deNb = rNb.Next(1, NbFace);
-            MessageBox.Show(deNb.ToString());
+           
+            
+            
+                deNb = rNb.Next(1, NbFace);
+                MessageBox.Show(deNb.ToString());
+                Type = "normale";
+            
+           
+            Pointage();
+
             return deNb;
+        }
+
+        public override int Pointage()
+        {
+            Point = deNb + Point;
+            return Point;
         }
     }
 }
