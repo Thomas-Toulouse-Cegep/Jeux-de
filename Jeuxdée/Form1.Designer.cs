@@ -40,9 +40,10 @@
             // btnBrasser
             // 
             this.btnBrasser.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBrasser.Location = new System.Drawing.Point(295, 537);
+            this.btnBrasser.Location = new System.Drawing.Point(228, 401);
+            this.btnBrasser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBrasser.Name = "btnBrasser";
-            this.btnBrasser.Size = new System.Drawing.Size(340, 54);
+            this.btnBrasser.Size = new System.Drawing.Size(298, 40);
             this.btnBrasser.TabIndex = 0;
             this.btnBrasser.Text = "Brasser!";
             this.btnBrasser.UseVisualStyleBackColor = true;
@@ -50,9 +51,11 @@
             // 
             // picBoxDe
             // 
-            this.picBoxDe.Location = new System.Drawing.Point(261, 164);
+            this.picBoxDe.Location = new System.Drawing.Point(182, 89);
+            this.picBoxDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBoxDe.Name = "picBoxDe";
-            this.picBoxDe.Size = new System.Drawing.Size(419, 363);
+            this.picBoxDe.Size = new System.Drawing.Size(374, 287);
+            this.picBoxDe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picBoxDe.TabIndex = 1;
             this.picBoxDe.TabStop = false;
             // 
@@ -60,9 +63,9 @@
             // 
             this.TyperPoint.AutoSize = true;
             this.TyperPoint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TyperPoint.Location = new System.Drawing.Point(12, 9);
+            this.TyperPoint.Location = new System.Drawing.Point(10, 7);
             this.TyperPoint.Name = "TyperPoint";
-            this.TyperPoint.Size = new System.Drawing.Size(57, 28);
+            this.TyperPoint.Size = new System.Drawing.Size(45, 21);
             this.TyperPoint.TabIndex = 2;
             this.TyperPoint.Text = "Type:";
             // 
@@ -70,41 +73,44 @@
             // 
             this.lbPoint.AutoSize = true;
             this.lbPoint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPoint.Location = new System.Drawing.Point(8, 64);
+            this.lbPoint.Location = new System.Drawing.Point(228, 7);
             this.lbPoint.Name = "lbPoint";
-            this.lbPoint.Size = new System.Drawing.Size(61, 28);
+            this.lbPoint.Size = new System.Drawing.Size(48, 21);
             this.lbPoint.TabIndex = 3;
             this.lbPoint.Text = "Point:";
             // 
             // txtType
             // 
             this.txtType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtType.Location = new System.Drawing.Point(75, 6);
+            this.txtType.Location = new System.Drawing.Point(66, 4);
+            this.txtType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
-            this.txtType.Size = new System.Drawing.Size(169, 34);
+            this.txtType.Size = new System.Drawing.Size(148, 29);
             this.txtType.TabIndex = 4;
             // 
             // txtPoint
             // 
             this.txtPoint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPoint.Location = new System.Drawing.Point(75, 61);
+            this.txtPoint.Location = new System.Drawing.Point(282, 7);
+            this.txtPoint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPoint.Name = "txtPoint";
             this.txtPoint.ReadOnly = true;
-            this.txtPoint.Size = new System.Drawing.Size(169, 34);
+            this.txtPoint.Size = new System.Drawing.Size(148, 29);
             this.txtPoint.TabIndex = 5;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 603);
+            this.ClientSize = new System.Drawing.Size(721, 452);
             this.Controls.Add(this.txtPoint);
             this.Controls.Add(this.txtType);
             this.Controls.Add(this.lbPoint);
             this.Controls.Add(this.TyperPoint);
             this.Controls.Add(this.picBoxDe);
             this.Controls.Add(this.btnBrasser);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

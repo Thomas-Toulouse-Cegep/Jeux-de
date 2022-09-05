@@ -2,31 +2,27 @@
 {
     internal class De : DeControleur
     {
-        private Random rNb = new Random();
+        private Random randomNbr = new Random();
 
-        private int deNb;
-
-        private string type = "normal";
+        private int deNbr;
 
         public De(int nbFacePlusUn, string type, int chance) : base(nbFacePlusUn, type, chance)
         {
-            type = "normale";
         }
 
-        public override int Generer()
+        public override int LancerDeDe()
         {
-            deNb = rNb.Next(1, NbFace);
-            MessageBox.Show(deNb.ToString());
-            Type = "normale";
+            deNbr = randomNbr.Next(1, NbFace);
+            
 
             Pointage();
 
-            return deNb;
+            return deNbr;
         }
 
         public override void ImageDe(PictureBox pictureBox, Image image)
         {
-            switch (deNb)
+            switch (deNbr)
             {
                 case 1:
                     pictureBox.Image = Properties.Resources._1;
@@ -56,7 +52,7 @@
 
         public override int Pointage()
         {
-            Point = deNb + Point;
+            Point = deNbr;
             return Point;
         }
     }
