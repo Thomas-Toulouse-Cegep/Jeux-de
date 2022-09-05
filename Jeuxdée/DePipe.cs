@@ -2,36 +2,26 @@
 {
     internal class DePipe : DeControleur
     {
-        private Random rNb = new Random();
+        private Random randomNbr = new Random();
 
-        private int deNb;
+        private int deNbr;
+        private int nbrChance;
 
         public DePipe(int nbFacePlusUn, string type, int chance) : base(nbFacePlusUn, type, chance)
         {
-            type = "pipe";
         }
 
-        public override int Generer()
+        public override int LancerDeDe()
         {
-            Random randomchance = new Random();
-            randomchance.Next(0, 100);
-            deNb = rNb.Next(1, NbFace);
-            if (Chance <= 50)
-            {
-                MessageBox.Show(deNb.ToString());
-            }
-            else
-            {
-                MessageBox.Show(deNb.ToString());
-            }
-            Type = "Pipé";
+            deNbr = randomNbr.Next(1, NbFace);
+
             Pointage();
-            return deNb;
+            return deNbr;
         }
 
         public override void ImageDe(PictureBox pictureBox, Image image)
         {
-            switch (deNb)
+            switch (deNbr)
             {
                 case 1:
                     pictureBox.Image = Properties.Resources._1;
@@ -61,16 +51,19 @@
 
         public override int Pointage()
         {
-            Random randomchance = new Random();
-            randomchance.Next(0, 100);
-            if (Chance <= 50)
+            Random randomChance = new Random();
+
+            nbrChance = randomChance.Next(0, 100);
+
+            if (nbrChance >= Chance)
             {
-                deNb = deNb * 2;
-                Point = (deNb + Point);
+                deNbr = deNbr * 2;
+                MessageBox.Show("bonus 2x !!!");
+                Point = deNbr;
             }
             else
             {
-                Point = deNb + Point;
+                Point = deNbr;
             }
 
             return Point;

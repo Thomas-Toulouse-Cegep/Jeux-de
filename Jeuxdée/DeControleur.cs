@@ -6,8 +6,6 @@
         private string type;
         private int chance;
         private int point;
-        private int deNb;
-        private Random rNb = new Random();
 
         public DeControleur(int nbFacePlusUn, string type, int chance)
         {
@@ -23,7 +21,7 @@
 
         public abstract void ImageDe(PictureBox pictureBox, Image image);
 
-        public abstract int Generer();
+        public abstract int LancerDeDe();
 
         public abstract int Pointage();
     }
