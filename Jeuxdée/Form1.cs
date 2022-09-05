@@ -1,5 +1,3 @@
-using System;
-
 namespace Jeuxdée
 {
     public partial class Form1 : Form
@@ -22,15 +20,16 @@ namespace Jeuxdée
             if (i == 1)
             {
                 de.Generer();
+                de.ImageDe(picBoxDe, picBoxDe.Image);
                 pointTotal += de.Point;
                 txtType.Text = de.Type;
             }
             else
             {
                 dePipe.Generer();
+                dePipe.ImageDe(picBoxDe, picBoxDe.Image);
                 pointTotal += dePipe.Point;
                 txtType.Text = dePipe.Type;
-                // DePipe dePipe = new DePipe(7, "p", 50);
             }
             txtPoint.Text = pointTotal.ToString();
         }
@@ -41,9 +40,7 @@ namespace Jeuxdée
 
         private void btnBrasser_Click(object sender, EventArgs e)
         {
-            //de.Generer();
             creerDe();
-            //txtPoint.Text = de.Point.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)

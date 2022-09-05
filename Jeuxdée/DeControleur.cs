@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Jeuxdée
+﻿namespace Jeuxdée
 {
     internal abstract class DeControleur
     {
@@ -19,14 +13,16 @@ namespace Jeuxdée
         {
             this.nbFacePlusUn = nbFacePlusUn;
             this.type = type;
-            this.chance = chance;
+            this.Chance = chance;
         }
 
         public int NbFace { get => nbFacePlusUn; set => nbFacePlusUn = value; }
         public string Type { get => type; set => type = value; }
         public int Point { get => point; set => point = value; }
+        public int Chance { get => chance; set => chance = value; }
 
-        //public abstract void ImageDe(PictureBox pictureBox, Graphics graphics);
+        public abstract void ImageDe(PictureBox pictureBox, Image image);
+
         public abstract int Generer();
 
         public abstract int Pointage();

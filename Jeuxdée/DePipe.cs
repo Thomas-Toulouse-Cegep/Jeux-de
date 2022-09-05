@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Jeuxdée
+﻿namespace Jeuxdée
 {
     internal class DePipe : DeControleur
     {
@@ -20,18 +14,14 @@ namespace Jeuxdée
         public override int Generer()
         {
             Random randomchance = new Random();
+            randomchance.Next(0, 100);
             deNb = rNb.Next(1, NbFace);
-            if (deNb <= 3)
+            if (Chance <= 50)
             {
-                deNb = deNb * 2;
-                //deNb  = rNb.Next(1, NbFace) * 2;
                 MessageBox.Show(deNb.ToString());
-               
             }
             else
             {
-               
-                //deNb = rNb.Next(1, NbFace);
                 MessageBox.Show(deNb.ToString());
             }
             Type = "Pipé";
@@ -39,9 +29,50 @@ namespace Jeuxdée
             return deNb;
         }
 
+        public override void ImageDe(PictureBox pictureBox, Image image)
+        {
+            switch (deNb)
+            {
+                case 1:
+                    pictureBox.Image = Properties.Resources._1;
+                    break;
+
+                case 2:
+                    pictureBox.Image = Properties.Resources._2;
+                    break;
+
+                case 3:
+                    pictureBox.Image = Properties.Resources._3;
+                    break;
+
+                case 4:
+                    pictureBox.Image = Properties.Resources._4;
+                    break;
+
+                case 5:
+                    pictureBox.Image = Properties.Resources._5;
+                    break;
+
+                case 6:
+                    pictureBox.Image = Properties.Resources._6;
+                    break;
+            }
+        }
+
         public override int Pointage()
         {
-            Point = deNb + Point;
+            Random randomchance = new Random();
+            randomchance.Next(0, 100);
+            if (Chance <= 50)
+            {
+                deNb = deNb * 2;
+                Point = (deNb + Point);
+            }
+            else
+            {
+                Point = deNb + Point;
+            }
+
             return Point;
         }
     }
