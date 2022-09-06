@@ -46,6 +46,15 @@
                 case 6:
                     pictureBox.Image = Properties.Resources._6;
                     break;
+                case 8:
+                    pictureBox.Image = Properties.Resources._4;
+                    break;
+                case 10:
+                    pictureBox.Image = Properties.Resources._5;
+                    break;
+                case 12:
+                    pictureBox.Image = Properties.Resources._6;
+                    break;
             }
         }
 
